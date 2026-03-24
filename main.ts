@@ -18,18 +18,27 @@ basic.showIcon(IconNames.Happy)
 
 // button a
 input.onButtonPressed(Button.A, function () {
-  basic.showString("#1 =" + numberA)
+  basic.clearScreen()  
+  basic.showString("#1 :" + numberA)
+  pause(2000)
+  basic.showIcon(IconNames.Happy)
 })
 
 // button b
 input.onButtonPressed(Button.B, function () {
-  basic.showString("#1 =" + numberB)
+  basic.clearScreen()
+  basic.showString("#2 :" + numberB)
+  pause(2000)
+  basic.showIcon(IconNames.Happy)
 })
 
 // shake
 input.onGesture(Gesture.Shake, function () {
+  basic.clearScreen()
   if (numberA > numberB )
     basic.showString(numberA + " > " + numberB)
   else
     basic.showString(numberA + " < " + numberB)
+  pause(2000)
+  basic.showIcon(IconNames.Happy)
 })
